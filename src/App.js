@@ -357,14 +357,15 @@ function App() {
                     <s.SpacerSmall />
                     <s.Container ai={"center"} jc={"center"} fd={"row"}>
                       <StyledButton
-                        disabled={claimingNft ? 1 : 0}
+                        disabled={true}
+                        // disabled={claimingNft ? 1 : 0}
                         onClick={(e) => {
                           e.preventDefault();
                           claimNFTs();
                           getData();
                         }}
                       >
-                        {claimingNft ? "BUSY" : "BUY"}
+                        {claimingNft ? "Mint Soon" : "MINT SOON"}
                       </StyledButton>
                     </s.Container>
                   </>
