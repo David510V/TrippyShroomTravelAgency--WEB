@@ -132,7 +132,7 @@ function App() {
     setFeedback(`Minting your ${CONFIG.NFT_NAME}...`);
     setClaimingNft(true);
     blockchain.smartContract.methods
-      .mint(blockchain.account, mintAmount)
+      .mint(blockchain.account ,mintAmount)
       .send({
         gasLimit: String(totalGasLimit),
         to: CONFIG.CONTRACT_ADDRESS,
@@ -215,8 +215,10 @@ function App() {
             jc={"center"}
             ai={"center"}
             style={{
+              backgroundImage:'url("/config/images/BackShroom.jpg")',
               backgroundColor: "var(--accent)",
               padding: 24,
+              width:'40%',
               borderRadius: 24,
               border: "4px dashed var(--secondary)",
               boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)",
