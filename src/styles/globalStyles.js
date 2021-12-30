@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 // Used for wrapping a page component
 export const Screen = styled.div`
-  background-color: var(--primary);
+  background-color: var(--primary-text);
   background-image: ${({ image }) => (image ? `url(${image})` : "none")};
   background-size: cover;
   background-position: center;
@@ -33,7 +33,7 @@ export const SpacerMedium = styled.div`
 // Used for providing space between components
 export const SpacerLarge = styled.div`
   height: 32px;
-  width: 32px;
+  width: 4%;
 `;
 
 // Used for providing a wrapper around a component

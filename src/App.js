@@ -59,7 +59,7 @@ export const ResponsiveWrapper = styled.div`
   flex-direction: column;
   justify-content: stretched;
   align-items: stretched;
-  width: 100%;
+  width: 90%;
   @media (min-width: 767px) {
     flex-direction: row;
   }
@@ -78,19 +78,21 @@ export const StyledImg = styled.img`
   box-shadow: 0px 5px 11px 2px rgba(0, 0, 0, 0.7);
   border: 4px dashed var(--secondary);
   background-color: var(--accent);
-  border-radius: 100%;
-  width: 200px;
+  border-radius: 7%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   @media (min-width: 900px) {
-    width: 250px;
+    width: 100%;
   }
   @media (min-width: 1000px) {
-    width: 300px;
+    width: 100%;
   }
   transition: width 0.5s;
 `;
 
 export const StyledLink = styled.a`
-  color: var(--secondary);
+  color: var(--primary);
   text-decoration: none;
 `;
 
@@ -198,14 +200,14 @@ function App() {
       <s.Container
         flex={1}
         ai={"center"}
-        style={{ padding: 24, backgroundColor: "var(--primary)" }}
-        image={CONFIG.SHOW_BACKGROUND ? "/config/images/bg.png" : null}
+        style={{ padding: 24, backgroundColor: "var(--primary-text)" }}
+        image={CONFIG.SHOW_BACKGROUND ? "/config/images/tstabg.png" : null}
       >
         <StyledLogo alt={"logo"} src={"/config/images/logo.png"} />
         <s.SpacerSmall />
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
           <s.Container flex={1} jc={"center"} ai={"center"}>
-            <StyledImg alt={"example"} src={"/config/images/example.gif"} />
+            <StyledImg alt={"example"} src={"/config/images/mush.gif"} />
           </s.Container>
           <s.SpacerLarge />
           <s.Container
@@ -369,14 +371,8 @@ function App() {
             )}
             <s.SpacerMedium />
           </s.Container>
-          <s.SpacerLarge />
-          <s.Container flex={1} jc={"center"} ai={"center"}>
-            <StyledImg
-              alt={"example"}
-              src={"/config/images/example.gif"}
-              style={{ transform: "scaleX(-1)" }}
-            />
-          </s.Container>
+         
+         
         </ResponsiveWrapper>
         <s.SpacerMedium />
         <s.Container jc={"center"} ai={"center"} style={{ width: "70%" }}>
