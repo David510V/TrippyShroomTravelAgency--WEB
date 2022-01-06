@@ -214,15 +214,7 @@ function App() {
             flex={2}
             jc={"center"}
             ai={"center"}
-            style={{
-              backgroundImage:'url("/config/images/BackShroom.jpg")',
-              backgroundColor: "var(--accent)",
-              padding: 24,
-              width:'40%',
-              borderRadius: 24,
-              border: "4px dashed var(--secondary)",
-              boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)",
-            }}
+            className="dApp-widget"
           >
             <s.TextTitle
               style={{
